@@ -10,7 +10,9 @@
     "prepare": "husky install",
     "prettier": "prettier --write .",
     "test": "node -v",
-    "release": "standard-version"
+    "release": "standard-version",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.13.2",
@@ -34,7 +36,20 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.1.0",
+    "@storybook/nextjs": "^7.1.0",
+    "@storybook/react": "^7.1.0",
+    "@storybook/testing-library": "^0.2.0",
     "cross-env": "^7.0.3",
-    "husky": "^8.0.3"
+    "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
+    "storybook": "^7.1.0"
+  },
+  "resolutions": {
+    "webpack": "^5"
   }
 }
