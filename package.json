@@ -3,18 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier .",
-    "test": "echo 'test' "
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "test": "node -v",
+    "release": "standard-version"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.13.2",
+    "@ant-design/icons": "^5.1.4",
+    "@commitlint/config-conventional": "^17.6.7",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "antd": "^5.7.2",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "commitlint": "^17.6.7",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.11",
     "next": "13.4.11",
@@ -25,6 +33,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3"
   }
 }
