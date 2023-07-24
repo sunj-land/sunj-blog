@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply w-full shadow-md rounded-md py-8 px-4 border-[1px] border-gray-300/30  border-solid;
+}
+
+.tag {
+  @apply px-4 text-[12px] h-[24px] leading-[20px] text-orange-400 border-orange-400 border-[2px] border-solid inline-block rounded-l-full rounded-r-full mx-2 font-bold;
+}
