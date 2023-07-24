@@ -35,9 +35,6 @@ export async function getStaticPaths() {
   return {
     paths: [
       {
-        params: { articleid: 'test' },
-      },
-      {
         params: { articleid: 'template' },
       },
     ],
