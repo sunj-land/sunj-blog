@@ -37,7 +37,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       {
-        params: { articleid: '123' },
+        params: { articleid: 'test' },
       },
     ],
     fallback: 'blocking',

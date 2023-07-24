@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import PageLayout from '@/components/page-layout';
-import { sleep } from '@/utils';
-import fs from 'fs/promises';
-import path from 'path';
 
 export default function Page(props: any) {
   console.log('props: ', props);
@@ -24,3 +21,9 @@ export default function Page(props: any) {
 Page.getLayout = function getLayout(page) {
   return <PageLayout>{page}</PageLayout>;
 };
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}

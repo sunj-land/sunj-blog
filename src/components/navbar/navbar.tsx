@@ -1,30 +1,19 @@
 import React, { useState } from 'react';
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Menu, Layout } from 'antd';
 import Link from 'next/link';
-import { useRouter } from '';
 
-const items: MenuProps['items'] = [
+const items = [
   {
     label: 'Navigation One',
     key: 'mail',
-    icon: <MailOutlined />,
   },
   {
     label: 'Navigation Two',
     key: 'app',
-    icon: <AppstoreOutlined />,
     disabled: true,
   },
   {
     label: 'Navigation Three - Submenu',
     key: 'SubMenu',
-    icon: <SettingOutlined />,
   },
   {
     label: 'Navigation Three - link',
@@ -37,7 +26,7 @@ const headerStyle = {
 export default function NavBar() {
   const [current, setCurrent] = useState('mail');
 
-  const onClick: MenuProps['onClick'] = (e) => {
+  const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
@@ -54,14 +43,5 @@ export default function NavBar() {
         </div>
       ))}
     </div>
-    // <Layout.Header className='flex items-center' style={headerStyle}>
-    //   <Menu
-    //     onClick={onClick}
-    //     selectedKeys={[current]}
-    //     mode='horizontal'
-    //     items={items}
-    //     className='w-full h-full'
-    //   />
-    // </Layout.Header>
   );
 }

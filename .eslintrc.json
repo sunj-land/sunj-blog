@@ -12,5 +12,8 @@
         "storybook/hierarchy-separator": "error"
       }
     }
-  ]
+  ],
+  "rules": {
+    "react/no-children-prop": "off"
+  }
 }
