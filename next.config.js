@@ -26,6 +26,7 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  compress: true,
 };
 
 module.exports = withMDX(nextConfig);

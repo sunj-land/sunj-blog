@@ -7,7 +7,6 @@ import PageLayout from '@/components/page-layout';
 
 export default function Page(props) {
   const router = useRouter();
-  console.log('router: ', router.query, props);
 
   return (
     <div className='w-full pt-20'>
@@ -19,7 +18,6 @@ export default function Page(props) {
 // 通过query获取md文档内容传入
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log('params: ', params, context.preview);
   // MDX text - can be from a local file, database, anywhere
   const mdData = await getArticleData(`${params.articleid}.mdx`);
   if (!mdData) {
@@ -38,6 +36,9 @@ export async function getStaticPaths() {
     paths: [
       {
         params: { articleid: 'test' },
+      },
+      {
+        params: { articleid: 'template' },
       },
     ],
     fallback: 'blocking',

@@ -2,12 +2,12 @@ import React from 'react';
 import { MDXRemote } from 'next-mdx-remote';
 import * as antComponents from 'antd';
 import * as customComponents from '@/components/md-components';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {
-  coy,
-  dark,
-  light,
-} from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
+SyntaxHighlighter.registerLanguage('js', js);
+SyntaxHighlighter.registerLanguage('css', css);
 
 const codeComponents = {
   code({ node, inline, className, children, ...props }) {
@@ -16,7 +16,7 @@ const codeComponents = {
       <SyntaxHighlighter
         {...props}
         children={String(children).replace(/\n$/, '')}
-        style={coy}
+        style={atomDark}
         language={match[1]}
         PreTag='div'
       />
@@ -35,7 +35,6 @@ const mdUsedComponents = {
 };
 
 export default function MDXContent({ source }) {
-  console.log('source=========: ', source);
   return (
     <div>
       <MDXRemote {...source} components={mdUsedComponents} />

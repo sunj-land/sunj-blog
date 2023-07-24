@@ -27,7 +27,6 @@ export default function NavBar() {
   const [current, setCurrent] = useState('mail');
 
   const onClick = (e) => {
-    console.log('click ', e);
     setCurrent(e.key);
   };
 
