@@ -20,9 +20,15 @@ export default function PageHeader() {
         </Link>
         <Link
           href='/articles'
-          className='text-lg font-medium hover:text-[#3273dc]'
+          className='text-lg mx-4 font-medium hover:text-[#3273dc]'
         >
           Articles
+        </Link>
+        <Link
+          href='/categories'
+          className='text-lg mx-4 font-medium last-child:mx-0 hover:text-[#3273dc]'
+        >
+          Categories
         </Link>
       </div>
     </div>

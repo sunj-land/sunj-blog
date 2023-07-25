@@ -1,8 +1,17 @@
-/** @type {import('next').NextConfig} */
+import remarkGfm from 'remark-gfm';
+import createMDX from '@next/mdx';
 
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
+const withMDX = createMDX({
+  options: {
+    extension: /\.mdx?$/,
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  },
 });
+
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   images: {
@@ -29,4 +38,4 @@ const nextConfig = {
   compress: true,
 };
 
-module.exports = withMDX(nextConfig);
+export default withMDX(nextConfig);

@@ -7,5 +7,5 @@
 }
 
 .tag {
-  @apply px-4 text-[12px] h-[24px] leading-[20px] text-orange-400 border-orange-400 border-[2px] border-solid inline-block rounded-l-full rounded-r-full mx-2 font-bold;
+  @apply px-4 text-[12px] h-[24px] leading-[20px] text-orange-400 border-orange-400 border-[2px] border-solid inline-block rounded-l-full rounded-r-full mr-2 font-bold;
 }

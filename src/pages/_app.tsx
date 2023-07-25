@@ -3,6 +3,7 @@ import theme from '@/theme/themeConfig';
 import { ConfigProvider } from 'antd';
 
 import '@/styles/global.css';
+import '@/styles/markdown.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component?.getLayout || ((page) => page);
